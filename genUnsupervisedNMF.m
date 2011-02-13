@@ -15,7 +15,7 @@ for norm_w = [0 2]
         
         [W1,H,E,C] = nmf_kl_ns_large(trainingSet, r , 'verb', 4, 'norm_w', norm_w, 'norm_h', norm_h, 'alpha', alpha, 'niter', 100,'EPS', eps, 'allinonce', 0);
 
-        filename = sprintf('%s/Set%02d_norm%d.mat', basesFolder, set, norm);
+        filename = sprintf('%s/Set%02d_norm%d.mat', basesFolder, set, norm_w);
         
         Bases = W1;
         save(filename, 'Bases');
